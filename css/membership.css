@@ -1,0 +1,143 @@
+/*Membership card design*/
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+
+.card{
+    background: linear-gradient(to right,white,black);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.slider {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate{
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 2s;
+} 
+
+
+
+/* Term & Conditions */
+.container h1{
+    text-align: center;
+    padding-top: 10px;
+    margin: 50px 100px;
+}
+
+.term-condition {
+    border: 2px solid black;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+/* */
+
+/* Benefit of Membership*/
+.flip-card {
+    display:block;
+    float:left;
+    margin:5px;
+    margin-bottom: 80px;
+    background-color: transparent;
+    width: 243px;
+    height: 350px;
+    perspective: 1000px;
+  }
+
+  @media only screen and (max-width: 768px){
+    .flip-card {
+      width: 50px;
+      height: 50px;
+      perspective: 20px;
+    }
+}
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(2, 34, 7, 0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: rgb(0, 14, 5);
+    color: black;
+  }
+  
+  .flip-card-front > h1{
+    color: white;
+    font-size: 12em;
+    padding-top: 75px;
+
+  }
+
+  .flip-card-back {
+    display:block;
+    background-color: #655322;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back > p{
+    padding-top: 70px;
+    font-size: 1.2em;
+    margin: 10px;
+  }
+
+  .flip-card-back > h1{
+    font-size: 3em;
+    padding-top: 30px;
+  }

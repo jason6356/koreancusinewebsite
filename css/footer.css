@@ -9,10 +9,11 @@
 
     width: 100%;
     padding : 100px 15%;
-    background: #333;
+    background: rgb(24, 23, 13);
     color: #efefef;
     display:flex;
     justify-content: space-around;
+    gap : 200px;
 }
 
 .footer div{
@@ -30,5 +31,8 @@
     text-decoration: none;
     color : #efefef;
     margin-bottom: 10px;
-}
+} 
 
+.socialicon > img {
+    color: white;
+}

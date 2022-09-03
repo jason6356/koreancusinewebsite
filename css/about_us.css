@@ -1,0 +1,63 @@
+.item1 {
+     grid-area: t_c;
+     background-image : url(); 
+}
+
+.item2 { 
+    grid-area: location;
+    background-image: url();
+ }
+
+.item3 { 
+    grid-area: introduction;
+    background-image: url();
+ }
+
+.item4 { 
+    grid-area: social;
+    background-image: url();
+ }
+
+.item5 { 
+    grid-area: promises;
+    background-image: url();
+ }
+
+.item6 { 
+    grid-area: product; 
+    background-image: url();
+}
+
+#item {
+    text-align: center;
+    border: 2px groove blue;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+#item:hover {
+    color:white;
+    background-color: black;
+}
+
+.grid-container {
+
+    display: grid;
+    grid-template-areas:
+    't_c t_c location location location'
+    't_c t_c introduction introduction social'
+    't_c t_c introduction introduction social'
+    'promises promises promises product social';
+    gap: 10px;
+    padding: 10px;
+
+    /** Center Div**/
+    margin: 100px 100px 200px 200px;
+    width: 80%;
+    height: 80%;
+    border: 3px solid green;
+    padding: 10px;
+
+}

@@ -2,19 +2,16 @@
 .introduction {
     text-align: center;
     width: 100%;
-    height: 160px;
-    background-color: rgb(58, 10, 10);
+    height: 130px;
+    background-color: #eeeeaf;
 }
 
 .introduction > h1 {
-    color : white;
-    font-family: monospace;
+    color : rgb(78, 73, 40);
+    font-family: serif;
+    font-size: 35px;
 }
 
-img#logo {
-    width: 100px;
-    height: 100px;
-}
 
 .nav > ul{
 
@@ -28,11 +25,11 @@ img#logo {
     display: inline;
     float : left;
     width: 20%;
-    background-color: rgb(14, 0, 0);
+    background-color: rgb(74, 77, 56);
 }
 
 .nav > ul > li:hover {
-    background-color: rgb(78, 5, 5);
+    background-color: rgb(171, 168, 79);
 }
 
 .nav > ul > li > a {
@@ -41,7 +38,7 @@ img#logo {
     text-align: center;
     text-decoration: none;
     font-size: 2em;
-    font-family: monospace;
+    font-family: sans-serif;
     color: white;
 }
 
@@ -52,4 +49,25 @@ img#logo {
     }
 }
 
-
+html, body {
+    width: 100%;
+    height:100%;
+}
+  
+body {
+      background: linear-gradient(45deg, #a8ae70, #dee98f, #6f6e40, #978544);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+}
+  
+@keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+}
