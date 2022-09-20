@@ -11,18 +11,31 @@ const descriptions = [
     `Product`
 ]
 
+const ids = [
+    'popup-1',
+    'popup-2',
+    'popup-3',
+    'popup-4',
+    'popup-5',
+    'popup-6'
+]
+
+let onGoingID = "";
+
 items.forEach(e => {
     e.addEventListener('click', function(element) {
         let text = e.children[0].textContent;
         title.textContent = text;
         let index = Array.from(e.parentNode.children).indexOf(e);
-        description.textContent = descriptions[index];
-        document.getElementById("popup-1").classList.toggle('active');
+        //description.textContent = descriptions[index];
+        let divID = ids[index];
+        document.getElementById(divID).classList.toggle('active');
+        onGoingID = divID;
     })
 })
 
 function togglePopup(){
-    document.getElementById("popup-1").classList.toggle('active');
+    document.getElementById(onGoingID).classList.toggle('active');
 }
 
 
